@@ -1,0 +1,229 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do Menu Âncora */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px; /* Espaço entre o menu e o logo */
+}
+
+.navbar .logo img {
+    width: 300px; /* Aumenta o tamanho do logo */
+    height: auto;
+    background-color: white; /* Fundo branco para dar destaque */
+    padding: 15px; /* Espaçamento maior ao redor do logo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+.navbar .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaço maior entre os itens do menu */
+}
+
+.navbar .nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.5em; /* Tamanho da fonte maior */
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-menu li a:hover {
+    background-color: #00bfa5;
+}
+
+.contact-info {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.contact-info i {
+    font-size: 1.5em;
+    margin-right: 8px;
+    color: #00bfa5;
+}
+
+.social-icons a {
+    color: #00bfa5;
+    font-size: 1.8em;
+    margin-left: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00796b;
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilo ajustado para evitar sobreposição do menu fixo */
+.courses {
+    padding: calc(80px + 20px) 20px 40px; /* 80px para o menu + 20px extra de margem */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.courses h1 {
+    font-size: 2.5em; /* Tamanho maior para destaque */
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -20px; /* Move o título para cima */
+}
+
+/* Estilo da lista de cursos */
+.course-list {
+    display: grid; /* Usa grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    gap: 15px; /* Reduz o espaço entre os cards */
+    justify-content: center; /* Centraliza a grade */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilo da seção "Outros Cursos" */
+.other-courses {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9; /* Cor de fundo para diferenciar */
+    text-align: center;
+}
+
+.other-courses .course-list {
+    display: grid; /* Usa grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    gap: 15px; /* Reduz o espaço entre os cards */
+    justify-content: center; /* Centraliza a grade */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilo dos Cards */
+.card {
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    width: 350px; /* Aumenta a largura dos cards */
+    height: 425px; /* Aumenta a altura dos cards */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 87%; /* Diminuindo a altura da imagem */
+    object-fit: contain; /* Garante que a imagem seja exibida sem cortes */
+    object-position: center;
+    border-radius: 8px 8px 0 0; /* Cantos arredondados no topo */
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0 5px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card button {
+    background-color: #00bfa5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+    background-color: #00796b;
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.unicorp-logo {
+    text-align: center; /* Centraliza a logo */
+    margin-top: 10px; /* Espaçamento acima */
+}
+
+.unicorp-logo img {
+    max-width: 300px; /* Ajusta o tamanho máximo da logo */
+    height: auto; /* Mantém a proporção da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    .course-list,
+    .other-courses .course-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-menu li a {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .contact-info,
+    .social-icons {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .courses h1 {
+        font-size: 2em;
+    }
+
+    .course-list,
+    .other-courses .course-list {
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+        gap: 10px; /* Redução adicional para telas pequenas */
+    }
+
+    .card {
+        width: 100%; /* Cards vão ocupar toda a largura disponível */
+        height: auto; /* Ajuste a altura automaticamente */
+    }
+    
+    .courses {
+        padding: calc(80px + 20px) 20px 40px; /* Mantém o ajuste dinâmico */
+    }
+}

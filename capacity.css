@@ -1,0 +1,220 @@
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do Menu Âncora */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo img {
+    width: 300px; /* Aumenta o tamanho do logo */
+    height: auto;
+    background-color: white; /* Fundo branco para dar destaque */
+    padding: 15px; /* Espaçamento maior ao redor do logo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+.navbar .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaço maior entre os itens do menu */
+}
+
+.navbar .nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.5em; /* Tamanho da fonte maior */
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-menu li a br {
+    line-height: 0.5em; /* Ajuste o espaçamento entre as linhas */
+}
+
+.navbar .nav-menu li a span {
+    display: block;
+}
+
+.navbar .nav-menu li a:hover {
+    background-color: #00bfa5;
+}
+
+.contact-info {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.contact-info i {
+    font-size: 1.5em;
+    margin-right: 8px;
+    color: #00bfa5;
+}
+
+.social-icons a {
+    color: #00bfa5;
+    font-size: 1.8em;
+    margin-left: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00796b;
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.courses {
+    text-align: center;
+    padding: 50px 50px; /* Ajuste o padding para dar espaço para os cards */
+}
+
+.courses h1 {
+    font-size: 2.5em; /* Tamanho maior para destaque */
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -20px; /* Move o título para cima */
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo dos Cards */
+.card {
+    background-color: #333; /* Mantém a cor cinza */
+    color: #fff;
+    border-radius: 8px;
+    width: 280px; /* Aumenta a largura dos cards */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 160px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0 5px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card button {
+    background-color: #00bfa5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+    background-color: #00796b;
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .navbar .nav-menu li a {
+        font-size: 1.4em; /* Ajusta o tamanho das letras para telas médias */
+    }
+
+    .navbar .logo img {
+        width: 200px; /* Ajusta a largura da logo em telas médias */
+    }
+
+    .banner-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner, .info, .qrcode {
+        flex: none;
+        width: 100%;
+    }
+
+    .banner img, .qrcode img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Garante que o menu ocupe toda a largura da tela */
+    }
+
+    .navbar .nav-menu li a {
+        padding: 10px 15px;
+        font-size: 1.2em;
+    }
+
+    .courses h1 {
+        font-size: 2em; /* Ajusta o tamanho do título */
+    }
+
+    .course-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%; /* Ajusta o tamanho dos cards para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo img {
+        width: 180px; /* Ajusta ainda mais o tamanho da logo */
+    }
+
+    .navbar .nav-menu li a {
+        font-size: 1.1em; /* Ajusta o tamanho da fonte para celulares muito pequenos */
+    }
+
+    .courses h1 {
+        font-size: 1.8em; /* Ajusta o título para telas pequenas */
+    }
+
+    .card {
+        width: 100%; /* Faz os cards ocuparem toda a largura */
+    }
+}

@@ -1,0 +1,173 @@
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo img {
+    width: 250px; /* Ajusta o tamanho da logo em telas pequenas */
+    height: auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-menu li a:hover {
+    background-color: #00bfa5;
+}
+
+.contact-info {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.contact-info i {
+    font-size: 1.5em;
+    margin-right: 8px;
+    color: #00bfa5;
+}
+
+.social-icons a {
+    color: #00bfa5;
+    font-size: 1.8em;
+    margin-left: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00796b;
+    transform: scale(1.1);
+}
+
+/* Lista de Cursos */
+.courses {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto */
+}
+
+.courses h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Garante que o título está centralizado */
+}
+
+.course-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens da lista */
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.course-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%; /* Garante que os itens da lista ocupem toda a largura disponível */
+    max-width: 800px; /* Limita a largura dos itens */
+    text-align: left; /* Alinha o texto à esquerda dentro de cada item */
+}
+
+.course-list li:last-child {
+    border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .navbar .nav-menu li a {
+        font-size: 1.4em; /* Ajusta o tamanho das letras para telas menores */
+    }
+
+    .navbar .logo img {
+        width: 200px; /* Ajusta a largura da logo em telas médias */
+    }
+
+    .courses h1 {
+        font-size: 2.3em; /* Reduz o tamanho do título em telas médias */
+    }
+}
+
+/* Para celulares menores */
+@media (max-width: 768px) {
+    .navbar .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Garante que o menu ocupe toda a largura da tela */
+    }
+
+    .navbar .nav-menu li a {
+        padding: 10px 15px;
+        font-size: 1.2em;
+    }
+
+    .courses {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .courses h1 {
+        font-size: 2em;
+    }
+
+    .course-list li {
+        font-size: 1.1em;
+    }
+}
+
+/* Para celulares muito pequenos (como telas 320px de largura) */
+@media (max-width: 480px) {
+    .navbar .logo img {
+        width: 180px; /* Ajusta ainda mais o tamanho da logo */
+    }
+
+    .navbar .nav-menu li a {
+        font-size: 1.1em; /* Ajusta o tamanho da fonte para celulares muito pequenos */
+    }
+
+    .courses h1 {
+        font-size: 1.8em; /* Tamanho menor para o título */
+    }
+
+    .course-list li {
+        font-size: 1em; /* Tamanho da fonte reduzido */
+    }
+}
